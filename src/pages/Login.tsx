@@ -100,6 +100,8 @@ export const Login: React.FC<LoginFormProps> = ({ onLoginSuccess, apiUrl, csrfTo
                 timer: 1500,
                 timerProgressBar: true
             });
+            // Guardar el token en el localStorage
+            localStorage.setItem('token', data.access);
 
             window.location.href = '/home';
             
@@ -114,7 +116,7 @@ export const Login: React.FC<LoginFormProps> = ({ onLoginSuccess, apiUrl, csrfTo
     return (
 
 
-        <div className="d-flex flex-column flex-root" id="kt_app_root">
+        <div className="d-flex flex-column flex-root vh-100 kt_app_root" id="kt_app_root">
             <div className="d-flex flex-column flex-column-fluid flex-lg-row">
                 {/* Sección Branding */}
                 <div className="d-flex flex-center w-lg-50 pt-15 pt-lg-0 px-10">
