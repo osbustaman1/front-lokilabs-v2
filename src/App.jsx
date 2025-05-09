@@ -1,9 +1,6 @@
 import React from 'react';
-
-import "../src/assets/fullcalendar/fullcalendar.bundle.css";
-import "../src/assets/datatables/datatables.bundle.css";
-import "../src/assets/plugins.bundle.css";
-import "../src/assets/style.bundle.css";
+import { Sidebar } from './components/common/Sidebar';
+import { Header } from './components/common/Header';
 
 function App() {
     return (
@@ -20,15 +17,16 @@ function App() {
                 data-kt-app-sidebar-push-footer="true" 
                 data-kt-app-toolbar-enabled="true" 
                 className="app-default">
-                    <div className="d-flex flex-column flex-root app-root" id="kt_app_root">
+                <div className="d-flex flex-column flex-root app-root" id="kt_app_root">
 
-                        <div className="app-page flex-column flex-column-fluid" id="kt_app_page">
-                            {/*Aqui van los menus, el Sidebar y el Header*/}
-                            Hola
-                        </div>
+                    <div className="app-page flex-column flex-column-fluid" id="kt_app_page">
+                        {/*Aqui van los menus, el Sidebar y el Header*/}
+                        <Header token={''} apiUrl={''}/>
+                        <Sidebar token={''} apiUrl={''}/>
                     </div>
-
                 </div>
+
+            </div>
         </>
     )
 }

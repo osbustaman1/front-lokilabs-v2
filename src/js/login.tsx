@@ -25,15 +25,4 @@ const login = async (data: imputsLogin): Promise<any> => {
 };
 
 export { login };
-// Ejemplo de uso
-// (async () => {       
-//     try {
-//         const data = await login({ email: '  
-//             email: '
-//             password: 'password123
-//         });
-//         console.log('Login exitoso:', data);
-//     } catch (error) {
-//         console.error('Error en el login:', error);
-//     }
-// })();
+
