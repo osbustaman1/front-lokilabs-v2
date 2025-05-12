@@ -68,16 +68,47 @@ const Sidebar: React.FC<SidebarProps> = ({ token, apiUrl }) => {
                                 data-kt-menu-expand="false">
 
                                 {menuUser.map((mnu, index) => (
-                                    <div className="menu-item pt-5">
-                                        <div className="menu-content">
-                                            <span className="menu-heading fw-bold text-uppercase fs-7">{mnu.title}</span>
+                                    <div key={index}>
+                                        <div className="menu-item pt-5">
+                                            <div className="menu-content">
+                                                <span className="menu-heading fw-bold text-uppercase fs-7">{mnu.title}</span>
+                                            </div>
                                         </div>
+
+                                        {mnu.items.map((item, index) => (
+                                            <div key={index} data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                                <span className="menu-link">
+                                                    <span className="menu-icon">
+                                                        <i className={item.icon}>
+                                                            <span className="path1"></span>
+                                                            <span className="path2"></span>
+                                                        </i>
+                                                    </span>
+                                                    <span className="menu-title">{item.nameItems}</span>
+                                                    <span className="menu-arrow"></span>
+                                                </span>
+
+                                                <div className="menu-sub menu-sub-accordion">
+                                                    <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                                    {item.subItems.map((subItem, index) => (
+                                                            <div key={index} className="menu-item">
+                                                                <Link to={subItem.path} className={`menu-link ${subItem.path[1] === subItem.item && subItem.path[2] === subItem.subItem ? "active" : ""}`}>
+                                                                    <span className="menu-bullet">
+                                                                        <span className="bullet bullet-dot"></span>
+                                                                    </span>
+                                                                    <span className="menu-title">{subItem.name}</span>
+                                                                </Link>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 ))}
-                                                                
 
                                 {/* Items del menu */}
-                                <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                {/* <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
                                     <span className="menu-link">
                                         <span className="menu-icon">
                                             <i className="ki-duotone ki-user fs-2">
@@ -88,7 +119,6 @@ const Sidebar: React.FC<SidebarProps> = ({ token, apiUrl }) => {
                                         <span className="menu-title">Authentication</span>
                                         <span className="menu-arrow"></span>
                                     </span>
-
                                     <div className="menu-sub menu-sub-accordion">
                                         <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
                                             <span className="menu-link">
@@ -109,7 +139,14 @@ const Sidebar: React.FC<SidebarProps> = ({ token, apiUrl }) => {
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div className="menu-item">
+                                            <Link className="menu-link" to="">
+                                                <span className="menu-bullet">
+                                                    <span className="bullet bullet-dot"></span>
+                                                </span>
+                                                <span className="menu-title">Error 500</span>
+                                            </Link>
+                                        </div>
                                         <div className="menu-item">
                                             <Link className="menu-link" to="">
                                                 <span className="menu-bullet">
@@ -119,11 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({ token, apiUrl }) => {
                                             </Link>
                                         </div>
                                     </div>
-
-
-
-                                    
-                                </div>
+                                </div> */}
 
 
                             </div>
