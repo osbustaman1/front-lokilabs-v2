@@ -1,10 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import { Router } from './router/router.jsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Router } from './router/router';
 
-createRoot(document.getElementById('root')).render(
-    <StrictMode>
+import './static/style_override.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+
+    // <React.StrictMode>
         <Router />
-    </StrictMode>,
+    // </React.StrictMode>,
 )

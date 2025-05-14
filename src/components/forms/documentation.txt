@@ -1,0 +1,141 @@
+const config_form = {
+        number_row: 3,
+        id_form: 'form_customer',
+        position_form: 'vertical',
+        inputs: [
+            {
+                label: 'Nombre Cliente',
+                required: true,
+                name: 'cus_name',
+                type: 'text',
+                value: cusName,
+                setValue: setCusName
+            },{
+                label: 'Rut Cliente',
+                required: true,
+                name: 'cus_identifier',
+                type: 'text',
+                value: cusIdentifier,
+                setValue: setCusIdentifier,
+                evento: {
+                    name: 'onBlur',
+                    action: 'validateRut',
+                    params: 'rut',
+                    message: {
+                        error: 'El rut del cliente ingresado no es válido',
+                        success: 'El rut del cliente ingresado es válido'
+                    }
+                }
+            },{
+                label: 'Email Cliente',
+                required: true,
+                name: 'cus_email',
+                type: 'text',
+                value: cusEmail,
+                setValue: setCusEmail,
+                evento: {
+                    name: 'onBlur',
+                    action: 'validateEmail',
+                    params: 'email',
+                    message: {
+                        error: 'El email del cliente ingresado no es válido',
+                        success: 'El email del cliente ingresado es válido'
+                    }
+                }
+            },{
+                label: 'Nombre Representante',
+                required: true,
+                name: 'cus_representative_name',
+                type: 'text',
+                value: cusRepresentativeName,
+                setValue: setCusRepresentativeName,
+            },{
+                label: 'Rut Representante',
+                required: true,
+                name: 'cus_representative_rut',
+                type: 'text',
+                value: cusRepresentativeRut,
+                setValue: setCusRepresentativeRut,
+                evento: { // Evento a ejecutar opcional
+                    name: 'onBlur', // Evento a ejecutar (onBlur, onChange, etc.)
+                    action: 'validateRut', // Acción a ejecutar
+                    params: 'rut', // Parámetros a enviar a la acción
+                    message: {
+                        error: 'El rut del representante ingresado no es válido',
+                        success: 'El rut del representante ingresado es válido'
+                    }
+                }
+            },{
+                label: 'Email Representante',
+                required: true,
+                name: 'cus_representative_mail',
+                type: 'text',
+                value: cusRepresentativeMail,
+                setValue: setCusRepresentativeMail,
+                evento: {
+                    name: 'onBlur',
+                    action: 'validateEmail',
+                    params: 'email',
+                    message: {
+                        error: 'El email del representante ingresado no es válido',
+                        success: 'El email del representante ingresado es válido'
+                    }
+                }
+            },{
+                label: 'Nombre Base de Datos',
+                required: true,
+                name: 'cus_name_bd',
+                type: 'text',
+                value: cusNameBd,
+                setValue: setCusNameBd
+            },{
+                label: 'Fecha Creación',
+                required: true,
+                name: 'cus_date_in',
+                type: 'date',
+                value: cusDateIn,
+                setValue: setCusDateIn
+            },{
+                label: 'Fecha Término',
+                required: false,
+                name: 'cus_date_out',
+                type: 'date',
+                value: cusDateOut,
+                setValue: setCusDateOut
+            },{
+                label: 'Cantidad Usuarios',
+                required: true,
+                name: 'cus_number_users',
+                type: 'number',
+                value: cusNumberUsers,
+                setValue: setCusNumberUsers
+            },{
+                label: 'Pais',
+                required: true,
+                name: 'country_id',
+                type: 'select_autocomplete',
+                options: countries,
+                text_default: '-- Seleccione --',
+                value: cusCountry,
+                setValue: setCusCountry
+            },{
+                label: 'Regiones',
+                required: true,
+                name: 'region_id',
+                type: 'select_autocomplete',
+                options: regions,
+                text_default: '-- Seleccione --',
+                value: cusRegion,
+                setValue: setCusRegion
+            },{
+                label: 'Comunas',
+                required: true,
+                name: 'commune_id',
+                type: 'select_autocomplete',
+                options: communes,
+                text_default: '-- Seleccione --',
+                value: cusCommune,
+                setValue: setCusCommune
+            }
+        ]
+    };

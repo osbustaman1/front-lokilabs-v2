@@ -1,0 +1,101 @@
+/* Asegura que el cuerpo de la página no exceda la altura de la ventana */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Evita el scroll general */
+}
+
+.page-header.page-header-dark .breadcrumb {
+    background-color: transparent !important;
+    box-shadow: transparent !important;
+}
+
+.mt-n10 {
+    margin-top: -8rem !important;
+}
+
+.page-header.page-header-dark .breadcrumb .breadcrumb-item{
+    color:#d8d4d4 !important;
+    font-size: 14px;;
+}
+
+.page-header .page-header-content .page-header-title .page-header-icon {
+    margin-right: 0rem;
+    display: inline-flex;
+}
+
+.color-text {
+    color: #d8d4d4 !important;
+}
+
+
+#layoutSidenav_content {
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    padding: 20px; /* Opcional: Ajusta el padding según tu preferencia */
+}
+
+main {
+    min-height: 100%; /* Asegura que el contenido siempre ocupe el espacio necesario */
+}
+
+.footer-admin {
+    background-color: transparent !important;
+    padding: 20px;
+    flex-shrink: 0; /* El footer no se reducirá y permanecerá visible */
+}
+
+
+#layoutSidenav_nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Asegura que el sidenav ocupe toda la altura de la ventana */
+}
+
+.sidenav-menu {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    overflow-y: auto; /* Habilita el scroll solo si el contenido es largo */
+}
+
+.sidenav-footer {
+    flex-shrink: 0; /* Mantiene el footer fijo sin reducir su tamaño */
+    background-color: #f8f9fa; /* Estilo del footer */
+    padding-bottom: 39%;
+    padding-top: 14%;
+}
+
+.scroll-div{
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 3%;
+}
+
+.form-control {
+    color: #333131 !important;
+    font-size: 16px !important;
+    height: 40px;
+}
+
+.form-control-perfil {
+    font-size: 16px !important;
+}
+
+.form-control:disabled {
+    background-color: #EEF2F8;
+    opacity: 1;
+    border: 0px !important;
+}
+.css-16xfy0z-control, .css-13cymwt-control {
+    font-size: 16px !important;
+    background-color: #EEF2F8 !important;
+    border-width: 0px !important;
+}
+
+.form-control:disabled {
+    background-color: #f2f2f2;
+    opacity: 1;
+}
+
+.me-3 {
+    margin-right: 0 !important;
+}

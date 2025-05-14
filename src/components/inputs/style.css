@@ -1,0 +1,55 @@
+/* Eliminar el efecto brillante (box-shadow) en el input */
+.form-control:focus {
+    box-shadow: none; /* Quita el efecto brillante */
+    outline: none; /* Quita el contorno del navegador */
+    border-bottom: 1px solid #B7BBBF;
+}
+
+.form-control:disabled, .datatable-input:disabled {
+    background-color: transparent;
+    opacity: 1;
+    color: #787d85 !important;
+}
+
+/* Contenido previo */
+.floating-label-input {
+    margin-top: 20px;
+    position: relative;
+}
+
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    color: #6c757d;
+    pointer-events: none;
+    
+}
+
+.floating-label.floating {
+    top: -10px;
+    font-size: 12px;
+    color: #787d85;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #B7BBBF;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-control.with-bottom-border {
+    border-bottom: 1px solid #007bff;
+}
+
+.form-control.with-bottom-border:hover {
+    border-bottom: 1px solid #0056b3;
+}
+
+
+.form-control {
+    height: 30px;
+}

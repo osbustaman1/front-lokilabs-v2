@@ -1,0 +1,8 @@
+.color-text-1 {
+    color: #0061f2;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}

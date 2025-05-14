@@ -1,0 +1,22 @@
+    const buttons_menu = [
+        { 
+            "label" : "Acciones",
+            "icon" : "fa fa-plus",
+            "list_items": [
+                {
+                    "label": "Agregar Sucursal",
+                    "url": `#`,
+                },{
+                    "label": "Agregar Centro de Costos",
+                    "url": `#`,
+                },{
+                    "label": "Agregar Entidad Asociada",
+                    "url": `#`,
+                }
+            ]
+        },{
+            "icon" : "fa-solid fa-arrow-right-from-bracket",
+            "url": `lista-empresas`,
+            "label": "Volver"
+        }
+    ];
